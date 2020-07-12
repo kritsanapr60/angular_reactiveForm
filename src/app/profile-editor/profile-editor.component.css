@@ -1,0 +1,9 @@
+.container {
+    padding: 10%;
+    padding-top: 20px;
+}
+
+mat-form-field {
+    padding: 10px;
+    align-items: center;
+}

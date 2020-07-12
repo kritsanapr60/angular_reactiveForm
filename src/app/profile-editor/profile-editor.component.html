@@ -1,0 +1,42 @@
+<div class="container">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        Value: {{ profileForm.value | json }}
+        <br>
+        <mat-form-field class="example-form-field">
+            <mat-label>First Name:</mat-label>
+            <input matInput type="text" formControlName="firstName" />
+        </mat-form-field>
+        <mat-form-field class="example-form-field">
+            <mat-label>Last Name:</mat-label>
+            <input matInput type="text" formControlName="lastName" />
+        </mat-form-field>
+        <hr>
+        <div formGroupName="address">
+            <h3>Address</h3>
+            <mat-form-field class="example-form-field">
+                <mat-label>Street:</mat-label>
+                <input matInput type="text" formControlName="street" />
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-form-field">
+                <mat-label>City:</mat-label>
+                <input matInput type="text" formControlName="city" />
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-form-field">
+                <mat-label>Province:</mat-label>
+                <input matInput type="text" formControlName="province" />
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-form-field">
+                <mat-label>Zip Code:</mat-label>
+                <input matInput type="text" formControlName="zip" />
+            </mat-form-field>
+        </div>
+        <hr>
+        <button mat-flat-button color="primary" [disabled]="!profileForm.valid">
+          Submit
+        </button>
+
+    </form>
+</div>
